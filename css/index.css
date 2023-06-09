@@ -1,0 +1,677 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+/* HEADER  */
+
+.header__top {
+    background-color: #ff4f81;
+    font-size: 14px;
+}
+
+.header__top a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.header__right a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: black;
+    margin-left: 0.25rem;
+    display: inline-block;
+}
+
+.header__left a:hover {
+    color: black !important;
+}
+
+.header__right a:hover {
+    background-color: #ff4f81;
+    border: 1px solid white;
+}
+
+.navInstruction a {
+    color: black;
+}
+
+.navInstruction .navbar-brand p:first-child {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.navInstruction .navbar-brand p:last-child {
+    font-size: 11px;
+    color: #ff4f81;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.navInstruction .navbar-brand p:first-child i {
+    transform: skewX(-10deg);
+}
+
+#navbarInstruction .nav-link {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+#navbarInstruction .nav-item {
+    margin: 0 15px;
+}
+
+#navbarInstruction .nav-item::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #ff4f81;
+    /* after và before đều là kiểu inline  */
+    display: block;
+    transition: all 0.5s;
+}
+
+#navbarInstruction .nav-item:hover::after {
+    width: 100%;
+}
+
+#navbarInstruction .nav-item:hover .nav-link {
+    color: #ff4f81;
+}
+
+#navbarInstruction .nav-item.active .nav-link {
+    color: #ff4f81;
+}
+
+#navbarInstruction .nav-item.active::after {
+    width: 100%;
+    color: #ff4f81;
+}
+
+#navbarInstruction .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+#navbarInstruction .dropdown-item {
+    color: white;
+    transition: all 0.5s;
+}
+
+#navbarInstruction .dropdown-item:focus,
+#navbarInstruction .dropdown-item:hover {
+    background-color: transparent;
+    color: #ff4f81;
+}
+
+.navInstruction .navbar-toggler {
+    color: #ff4f81;
+    background-color: black;
+    border-radius: 0;
+}
+
+.navInstruction .container-fluid .navbar-toggler:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+/* CYBER CAROUSEL  */
+/* lấy top:50% (kích thước của thẻ cha) left:50% (kích thước của thẻ cha) 
+cho số âm là đẩy thẻ đi lên, số dương là xuống*/
+#carouselCyber .carousel-caption {
+    top: 55%;
+    left: 50%;
+    /* còn di chuyển cái này là 50% của thẻ con, không còn lấy kích thước thẻ cha
+    -50% kéo về bên trái kích thước của thẻ con
+    cách chỉ này áp dụng cho thẻ con đang gắn position:absolute */
+    transform: translate(-50%, -50%);
+}
+
+#carouselCyber .carousel-caption h1 {
+    font-size: 52px;
+}
+
+#carouselCyber .carousel-caption p {
+    letter-spacing: 4px;
+    line-height: 1.8em;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 25px;
+}
+
+#carouselCyber .carousel-caption button {
+    padding: 11px 20px;
+    color: white;
+    border: 1px solid white;
+    letter-spacing: 2px;
+    font-size: 14px;
+    transition: all 0.5s;
+    border-radius: 0;
+}
+
+#carouselCyber .carousel-caption button:hover {
+    background-color: #ff4f81;
+    border-color: #ff4f81;
+}
+
+/* WELCOME  */
+.title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title h2 {
+    font-size: 40px;
+    color: #ff4f81;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.title p {
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    color: black;
+    font-size: 17px;
+}
+
+.title p::after {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: black;
+    display: block;
+    margin: 20px auto;
+}
+
+.welcome__content>p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 1px;
+    /* nếu như dùng em thì 1.8em đi theo font-size gần nhất với nó */
+    line-height: 1.8em;
+    color: #999;
+    font-size: 15px;
+    padding: 1rem 0 5rem;
+}
+
+.welcome__col {
+    padding: 2rem;
+}
+
+.welcome__item i {
+    font-size: 2rem;
+}
+
+.welcome__item h3 {
+    color: #ff4f81;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+.welcome__item h4 {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem 0 0.2rem;
+}
+
+.welcome__item p {
+    color: #999;
+    font-size: 15px;
+    line-height: 1.8em;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
+}
+
+.welcome__content .row .col-4 {
+    padding: 2rem;
+}
+
+/* OUR STATS  */
+.ourStats {
+    background-image: url(../img/cyberinstruction__image/banner2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.ourStats {
+    color: white;
+    text-align: center;
+}
+
+.ourStats i {
+    font-size: 2.5rem;
+}
+
+.ourStats .ourStats__content h3 {
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin: 30px 0 20px;
+    color: #ff4f81;
+}
+
+.ourStats .ourStats__content p {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* OFFER  */
+.offer__col {
+    padding: 15px;
+}
+
+.offer__item {
+    padding: 25px 40px;
+    text-align: center;
+    background-color: white;
+    transition: all 0.5s;
+    box-shadow: 0px 1px 8px 0px rgba(158, 158, 158, 0.75);
+}
+
+.offer__item i {
+    color: #ff4f81;
+    font-size: 40px;
+}
+
+.offer__item h3 {
+    font-size: 20px;
+    color: black;
+    margin: 25px 0 20px;
+}
+
+.offer__item p {
+    color: #6b6b6b;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.offer__item:hover {
+    background-color: #12ccc3;
+}
+
+/* FEEDBACK  */
+.feedback {
+    background-image: url(../img/cyberinstruction__image/banner3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.feedback .title p {
+    color: white;
+}
+
+.feedback__content {
+    box-shadow: 0px 1px 7px #8e8e8e;
+    background-color: rgba(0, 0, 0, 0.47);
+    padding: 1rem;
+}
+
+.feedback__content .feedback__top p {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.feedback__top {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.47);
+    position: relative;
+}
+
+.feedback__top::after {
+    content: "";
+    border-top: 9px solid rgba(0, 0, 0, 0.47);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    position: absolute;
+    top: 100%;
+    left: 28%;
+}
+
+.feedback__bottom {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    margin: 2rem auto 0;
+}
+
+.feedback__content .feedback__name {
+    margin-left: 5px;
+}
+
+.feedback__content .feedback__bottom img {
+    width: 28%;
+    display: inline-block;
+}
+
+.feedback__name p {
+    margin: 0;
+    color: #ff4f81;
+}
+
+.feedback__name p:first-child {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.feedback__content .owl-theme .owl-dots .owl-dot span {
+    background-color: #ff4f81;
+    opacity: 0.5;
+}
+
+.feedback__content .owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    opacity: 1;
+}
+
+/* NEWS */
+.news__content a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+.news__content a:hover {
+    color: #ff4f81;
+}
+
+.news__content img {
+    border: 2px solid #dedede;
+}
+
+.news__content h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.news__content h4 {
+    font-size: 1rem;
+    color: #ff4f81;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+}
+
+.news__content p {
+    color: #999;
+    margin-top: 1rem;
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+}
+
+.news__content .row:last-child {
+    margin-top: 5rem;
+}
+
+#cyberModal h5 {
+    font-size: 29px;
+    color: #ff4f81;
+    font-weight: bold;
+}
+
+#cyberModal p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.8em;
+    padding: 20px 0;
+}
+
+#cyberModal .modal-dialog {
+    max-width: 644px;
+}
+
+/* FOOTER  */
+footer {
+    background-color: #141415;
+}
+
+.footer__top h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4f81;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.footer__top p {
+    color: #8b8b96;
+    font-size: 15px;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+
+.footer__top .footer__new i {
+    color: #ff4f81;
+    margin-right: 1rem;
+
+}
+
+.footer__new a,
+.footer__contact a {
+    color: #8b8b96;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+.footer__new,
+.footer__contact {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer__contact i {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    color: white;
+    text-align: center;
+    margin-right: 1rem;
+    border: 1px solid #4b4b50;
+}
+
+.footer__new a:hover,
+.footer__contact a:hover {
+    color: white;
+}
+
+.footer__bottom {
+    color: white;
+}
+
+.footer__form label {
+    color: #ff4f81;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footer__form input {
+    padding: 14px;
+    border-radius: 0;
+    border: none;
+    letter-spacing: 1px;
+    color: #888888;
+    height: auto;
+}
+
+.footer__form button {
+    background-color: #ff4f81;
+    color: white;
+    padding: 12px 35px;
+    letter-spacing: 1px;
+    border-radius: 0;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.footer__top .footer__form button:hover {
+    background-color: #ec1955;
+    color: white;
+}
+
+.footer__bottom {
+    letter-spacing: 1px;
+    background-color: #0f0f10;
+}
+
+.footer__bottom a {
+    color: #ff4f81;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.footer__bottom a:hover {
+    color: white;
+}
+
+/* RESPONSIVE  */
+/* HEADER  */
+@media screen and (max-width: 1199.98px) {
+
+    #carouselCyber .carousel-caption {
+        top: 50%;
+    }
+
+    #carouselCyber .carousel-caption h1 {
+        font-size: 4vw;
+    }
+
+    #carouselCyber .carousel-caption p {
+        font-size: 1.6vw;
+        margin-bottom: 0.5em;
+    }
+
+    #carouselCyber .carousel-caption button {
+        font-size: 1.5vw;
+        padding: 0.8em 1em;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .navInstruction .navbar-brand p:first-child {
+        /* 3% so với width của trình duyệt  */
+        font-size: 3vw;
+    }
+
+    .navInstruction .navbar-brand p:last-child {
+        /* 3% so với width của trình duyệt  */
+        font-size: 1.5vw;
+    }
+
+}
+
+@media screen and (max-width: 767.98px) {
+    #navbarInstruction .navbar-nav {
+        background-color: #eee;
+        text-align: center;
+    }
+
+    #navbarInstruction .dropdown-menu {
+        background-color: #e0e1e2;
+        border-color: #e0e1e2;
+        text-align: center;
+    }
+
+    #navbarInstruction .dropdown-item {
+        color: black;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .title p {
+        padding: 0 15px;
+    }
+
+    .header__left a {
+        display: block;
+    }
+
+    .footer__form button,
+    .footer__form input {
+        padding: 10px;
+        border: 0;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 415px) {
+    #carouselCyber {
+        height: 250px;
+    }
+
+    #carouselCyber .carousel-inner,
+    #carouselCyber .carousel-item,
+    #carouselCyber .carousel-item img {
+        height: 100%;
+
+    }
+
+    #carouselCyber .carousel-item img {
+        object-fit: cover;
+
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .feedback__bottom {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__right {
+        width: 35%;
+        text-align: center;
+    }
+
+    .header__right a {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #navbarInstruction .nav-item {
+        margin: 0;
+        padding: 0 2px;
+    }
+
+    #navbarInstruction .nav-link {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width:575px) and (max-width: 992px) {
+    .feedback__bottom {
+        width: 85%;
+    }
+}
